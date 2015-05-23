@@ -9,8 +9,6 @@ defmodule CanIDeploy do
     children = [
       # Start the endpoint when the application starts
       supervisor(CanIDeploy.Endpoint, []),
-      # Start the Ecto repository
-      worker(CanIDeploy.Repo, []),
       # Here you could define other workers and supervisors as children
       # worker(CanIDeploy.Worker, [arg1, arg2, arg3]),
     ]

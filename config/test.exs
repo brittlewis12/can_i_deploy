@@ -8,11 +8,3 @@ config :can_i_deploy, CanIDeploy.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
-
-# Configure your database
-config :can_i_deploy, CanIDeploy.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "can_i_deploy_test",
-  size: 1 # Use a single connection for transactional tests

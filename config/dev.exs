@@ -25,11 +25,3 @@ config :can_i_deploy, CanIDeploy.Endpoint,
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"
-
-# Configure your database
-config :can_i_deploy, CanIDeploy.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "can_i_deploy_dev",
-  size: 10 # The amount of database connections in the pool
