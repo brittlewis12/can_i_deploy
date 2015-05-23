@@ -8,6 +8,7 @@ defmodule CanIDeploy.LockController do
     render conn, "index.json", %{data: LockManager.lock_state}
   end
 
+  # TODO: maybe map user_name to actual people's names?
   def lock(conn, %{"text" => "lock", "user_name" => name}) do
     render conn, "index.json", %{data: LockManager.lock(name)}
   end
