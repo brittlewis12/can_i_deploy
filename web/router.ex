@@ -6,7 +6,8 @@ defmodule CanIDeploy.Router do
   end
 
   scope "/", CanIDeploy do
-    pipe_through :browser # Use the default browser stack
+    pipe_through :api
 
+    get "/", LockController, :index
   end
 end
