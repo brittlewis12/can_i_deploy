@@ -9,5 +9,6 @@ defmodule CanIDeploy.Router do
     pipe_through :api
 
     get "/", LockController, :index
+    post "/", LockController, :lock
   end
 end
