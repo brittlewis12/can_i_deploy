@@ -20,7 +20,7 @@ defmodule CanIDeploy.LockManager do
       Dict.merge(dict, %{
         locked: true,
         locked_by: name,
-        locked_at: :calendar.now_to_universal_time()
+        locked_at: :calendar.now_to_universal_time(:erlang.now)
       })
     end)
     lock_state
